@@ -27,6 +27,3 @@ Bu repoda, **2025 yılı** için projelerimizde başlangıç olarak kullanabilec
 - **OData**: Sorgulama ve veri erişiminde esneklik sağlamak için  
 - **Scrutor**: Dependency Injection yönetimi ve dinamik servis kaydı için  
 
----
-
-> Bu yapı, sürdürülebilir, test edilebilir ve genişletilebilir projeler geliştirmek isteyen .NET geliştiricileri için tasarlan
