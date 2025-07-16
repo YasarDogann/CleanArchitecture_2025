@@ -1,5 +1,6 @@
 ﻿using CleanArchitecture_2025.Application.Employees;
 using CleanArchitecture_2025.Domain.Employees;
+using CleanArhictecture_2025.Application.Employees;
 using MediatR;
 using TS.Result;
 
@@ -19,13 +20,13 @@ namespace CleanArchitecture_2025.WebAPI.Modules
                 })
                 .Produces<Result<string>>();
 
-            //group.MapGet(string.Empty,
-            //    async (ISender sender, Guid id, CancellationToken cancellatioNToken) =>
-            //    {
-            //        var response = await sender.Send(new EmployeeGetQuery(id), cancellatioNToken);
-            //        return response.IsSuccessful ? Results.Ok(response) : Results.InternalServerError(response);
-            //    })
-            //    .Produces<Result<Employee>>();
+            group.MapGet(string.Empty,
+                async (ISender sender, Guid id, CancellationToken cancellatioNToken) =>
+                {
+                    var response = await sender.Send(new EmployeeGetQuery(id), cancellatioNToken);
+                    return response.IsSuccessful ? Results.Ok(response) : Results.InternalServerError(response);
+                })
+                .Produces<Result<Employee>>();
         }
     }
 }
